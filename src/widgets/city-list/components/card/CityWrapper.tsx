@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from "react";
+import { FC, memo, useEffect, useState } from "react";
 import { CityCard } from "@/entities/city-card";
 import { DeleteButton } from "@/features/weather";
 import { TypeCity } from "@/shared/types/type.city";
@@ -8,7 +8,7 @@ import { IWeather } from "@/shared/types/type.weather";
 interface ICityWrapperProps {
   city: TypeCity;
 }
-export const CityWrapper: FC<ICityWrapperProps> = ({ city }) => {
+const CityWrapperMemo: FC<ICityWrapperProps> = ({ city }) => {
   const [currentForecast, setCurrentForecast] = useState<IWeather | null>(null);
   const [forecasts, setForecasts] = useState<IWeather[][]>([]);
   const [loading, setLoading] = useState<boolean>(false);
@@ -36,3 +36,5 @@ export const CityWrapper: FC<ICityWrapperProps> = ({ city }) => {
     />
   );
 };
+
+export const CityWrapper = memo(CityWrapperMemo);
