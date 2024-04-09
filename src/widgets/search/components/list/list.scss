@@ -1,0 +1,52 @@
+.search-list {
+  width: 100%;
+  position: absolute;
+  top: 80px;
+  border-radius: 5px;
+  background-color: #2c2c2c;
+  box-shadow: 0px 0px 5px #000;
+  color: #fff;
+  transition-duration: 0.5s;
+
+  opacity: 0;
+  visibility: hidden;
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.search-list-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 20px;
+  height: 50px;
+  overflow: hidden;
+  cursor: pointer;
+  transition-duration: 300ms;
+
+  @media (min-width: 901px) {
+    &:hover {
+      background-color: #ffffff42;
+    }
+  }
+
+  &--exist {
+    background-color: #ffffff42;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+
+    img {
+      flex: 0 0 30px;
+      height: 30px;
+      margin-left: 10px;
+    }
+  }
+}
