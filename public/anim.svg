@@ -1,4 +1,4 @@
-<svg width="660" height="220" style="outline: 1px solid red">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="660" height="220" style="outline: 1px solid red">
 <defs>
 <mask id="mask-path" x="0" y="0" width="1" height="1">
 <path d="M0,0 l 75,100 150,75 -25,-125 Z" fill="#555" />
